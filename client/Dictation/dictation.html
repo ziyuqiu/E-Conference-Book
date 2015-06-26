@@ -1,10 +1,13 @@
-
-
 <template name="dictation">
   <div>
-  <input type="button" class="start_button" value="Start/Stop">
-  <input type="button" class="save_button" value="Save File">
-   <p>Say "Stop Dictation" to end the recording.</p>
+    <button type="button" class="start_button">
+      <span class="glyphicon glyphicon-play"></span> Start
+    </button>
+
+    <button type="button" class="save_button">
+      <span class="glyphicon glyphicon-save"></span> Save
+    </button>
+  <p>Say "Stop Dictation" to end the recording.</p>
   </div>
  
   <div id="results" class="bg-info">

@@ -74,6 +74,7 @@
 	function startDictation(event) {
 	  if (recognizing) {
 	    recognition.stop();
+	    $(".start_button").html("Start");
 	    return;
 	  }
 	  final_transcript = '';
@@ -81,13 +82,11 @@
 	  recognition.start();
 	  final_span.innerHTML = '';
 	  interim_span.innerHTML = '';
+	  $(".start_button").html("Stop");
 	}
 	
   Template.dictation.events({
-	
 	'click .start_button': function(event){
 		startDictation(event);
 	}
-
-
   });

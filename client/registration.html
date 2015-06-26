@@ -1,0 +1,99 @@
+<template name="registration">
+   <h1>Registration</h1> 
+   <!--
+   <div class="input-group-btn">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Sort By <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+         <li><a href="#" id="Default">Default</a></li>
+         <li><a href="#" id="School">School</a></li>
+         <li><a href="#" id="Committee">Committee</a></li>
+         <li><a href="#" id="Room">Room</a></li>
+      </ul>
+   </div>
+   -->
+   <table class="table table-hover">
+      <thead>
+         <tr>
+            <th>
+            </th>
+            <th>   
+            <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Name <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" id="A">A-Z</a></li>
+                     <li><a href="#" id="Z">Z-A</a></li>
+                  </ul>
+               </div>
+            </th>
+            <th>
+               <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">School <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" id="AllSchool">All</a></li>
+                     <li><a href="#" id="Brandeis">Brandeis</a></li>
+                     <li><a href="#" id="Harvard">Harvard</a></li>
+                     <li><a href="#" id="MIT">MIT</a></li>
+                     <li><a href="#" id="Tufts">Tufts</a></li>
+                     <li><a href="#" id="BU">BU</a></li>
+                     <li><a href="#" id="BC">BC</a></li>
+                  </ul>
+               </div>
+            </th>
+            <th>
+               <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Committee <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" id="AllCommittee">All</a></li>
+                     <li><a href="#" id="GA1">GA1</a></li>
+                     <li><a href="#" id="GA2">GA2</a></li>
+                     <li><a href="#" id="GA3">GA3</a></li>
+                     <li><a href="#" id="GA4">GA4</a></li>
+                     <li><a href="#" id="GA5">GA5</a></li>
+                     <li><a href="#" id="GA6">GA6</a></li>
+                  </ul>
+               </div>
+            </th>
+            <th>
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Room <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                     <li><a href="#" id="101">101</a></li>
+                     <li><a href="#" id="102">102</a></li>
+                     <li><a href="#" id="103">103</a></li>
+                     <li><a href="#" id="104">104</a></li>
+                     <li><a href="#" id="105">105</a></li>
+                     <li><a href="#" id="106">106</a></li>
+                     <li><a href="#" id="201">201</a></li>
+                     <li><a href="#" id="202">202</a></li>
+                     <li><a href="#" id="203">203</a></li>
+                     <li><a href="#" id="204">204</a></li>
+                     <li><a href="#" id="205">205</a></li>
+                     <li><a href="#" id="206">206</a></li>
+                  </ul>
+               </div>
+            </th>
+         </tr>
+      </thead>
+      <tbody>
+         {{#each registrations}}
+            {{> registrationRow}}
+         {{/each}}
+      </tbody>
+   </table>
+</template>
+		
+<template name="registrationRow">
+      <tr>
+         <td>{{>checkbox}}</td>
+         <td>{{Name}}</td>
+         <td>{{School}}</td>
+         <td>{{Committee}}</td>
+         <td>{{Room}}</td>
+         <td><span class="glyphicon glyphicon-pencil"></span></td>
+         <td><span class="glyphicon glyphicon-remove jbsapp-delete-icon" aria-hidden="true"></span></td>
+      </tr>
+</template>
+
+<!--
+<span class="sr-only">change sort category</span>
+-->

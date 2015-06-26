@@ -1,19 +1,53 @@
+Session.setDefault("Order","Recent");
+
+Template.schedule.helpers({
+   registrations: function(){
+   		if (Session.get("Order") == "Recent") {
+			return Schedules.find({},{sort:{"Date":-1,"Time":-1}});
+		} else {
+   			return Schedules.find({},{sort:{"Date":1,"Time":1}});
+   		}
+   }
+})
+
+
+Template.schedule.helpers({
+   schedules: function(){
+   		return Schedules.find({},{sort:{Date:1,Time:1}});
+   }
+
+})
+
+Template.schedule.events({
+	'click #Default':function(event){
+			event.preventDefault();
+			Session.set("Order","");
+	},
+	'click #Recent':function(event){
+			event.preventDefault();
+			Session.set("Order","Default");
+	}
+})
+
+Template.checkbox.events({
+  'k_elbuilt input': function() {
+    console.log('k_elbuilt event');
+  },
+
+  'k_checked input': function() {
+    console.log('k_checked event');
+  },
+
+  'k_unchecked input': function() {
+    console.log('k_unchecked event');
+  }
+});
+
 Template.scheduleRow.events({
 	"click .jbsapp-delete-icon": function(){Schedules.remove(this._id);}
 })
-
-Schedules.insert({Date:"June.1", Time: "15:00" ,Event:"Opening Ceremony",Room:"Volen 106",Speaker:"Timothy Hickey"});
-Schedules.insert({Date:"June.1", Time: "17:00" ,Event:"Dinner",Room:"Usdan",Speaker:" "});
-Schedules.insert({Date:"June.2", Time: "08:30" ,Event:"Session 1",Room:"Volen 106",Speaker:"Marie Meteer"});
-Schedules.insert({Date:"June.2", Time: "10:00" ,Event:"Session 2",Room:"Volen 106",Speaker:"Marie Meteer"});
-Schedules.insert({Date:"June.2", Time: "11:20" ,Event:"Lunch",Room:"Sherman",Speaker:" "});
-Schedules.insert({Date:"June.2", Time: "14:00" ,Event:"Session 3",Room:"Volen 106",Speaker:"Timothy Hickey"});
-Schedules.insert({Date:"June.2", Time: "15:30" ,Event:"Session 4",Room:"Volen 106",Speaker:" "});
-Schedules.insert({Date:"June.2", Time: "17:00" ,Event:"Dinner",Room:"Usdan",Speaker:"Timothy Hickey"});
  
-Template.schedule.helpers({
-   schedules: Schedules.find().fetch()
- })
+
 
 /*Template.schedule.events(
 	{ 
