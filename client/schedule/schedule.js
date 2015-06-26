@@ -1,19 +1,6 @@
-Session.setDefault("Order","Recent");
-
-Template.schedule.helpers({
-   registrations: function(){
-   		if (Session.get("Order") == "Recent") {
-			return Schedules.find({},{sort:{"Date":-1,"Time":-1}});
-		} else {
-   			return Schedules.find({},{sort:{"Date":1,"Time":1}});
-   		}
-   }
-})
-
-
 Template.schedule.helpers({
    schedules: function(){
-   		return Schedules.find({},{sort:{Date:1,Time:1}});
+   		return Schedules.find({},{sort:Session.get('dateSort')});
    }
 
 })
@@ -21,11 +8,11 @@ Template.schedule.helpers({
 Template.schedule.events({
 	'click #Default':function(event){
 			event.preventDefault();
-			Session.set("Order","");
+			Session.set('dateSort',{Date:1,Time:1});
 	},
 	'click #Recent':function(event){
 			event.preventDefault();
-			Session.set("Order","Default");
+			Session.set('dateSort',{Date:-1,Time:-1});
 	}
 })
 
