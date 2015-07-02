@@ -1,6 +1,15 @@
 <template name="diy">
 <html>
-  <h1>DIY</h1>
+  {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+   {{/contentFor}}
+  
+   {{#contentFor "headerTitle"}}
+      <h1 class="title">Note</h1>
+   {{/contentFor}}
+
+  {{#ionView}}
+  {{#ionContent}}
   <h4>Drag your mouse to draw on the screen!</h4>
   <meta charset="utf-8">
   <style>
@@ -44,5 +53,7 @@
       activeLine = null;
     }
   </script>
+  {{/ionContent}}
+   {{/ionView}}
 </html>
 </template>

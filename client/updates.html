@@ -1,5 +1,15 @@
 <template name="updates">
-	<div class="panel panel-success">
+   {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+   {{/contentFor}}
+  
+   {{#contentFor "headerTitle"}}
+      <h1 class="title">Updates</h1>
+   {{/contentFor}}
+
+   {{#ionView}}
+   {{#ionContent}}
+	<div class="panel panel-#212842">
       <div class="panel-heading">
          <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" 
@@ -44,5 +54,6 @@
          </div>
       </div>
    </div>
-
+   {{/ionContent}}
+   {{/ionView}}
 </template>

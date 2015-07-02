@@ -1,0 +1,30 @@
+<template name= "game">
+	{{#contentFor "headerButtonLeft"}}
+      	{{>ionNavBackButton path="index"}}
+   	{{/contentFor}}
+  
+   	{{#contentFor "headerTitle"}}
+      	<h1 class="title">Game</h1>
+   	{{/contentFor}}
+
+   	{{#ionView}}
+   	{{#ionContent}}
+   		   	{{#ionItem path="leaderboard" iconLeft=true iconRight=true}}
+		        {{> ionIcon icon="ios-checkmark" class="positive"}}
+		        Leaderboard
+		        {{> ionIcon icon="ios-arrow-right"}}
+		    {{/ionItem}}
+
+		<button id="startgame" class="button button-outline button-positive">Start</button>
+
+		<div id="time">Time: 0</div>
+<!-- 		<div id="caught">Balls caught: 0/50</div> -->
+		<div id="point">Score: 0</div>
+
+			<canvas id="gameboard" width="500" height="400">
+			Get a better brower!
+			</canvas>
+
+	{{/ionContent}}
+   	{{/ionView}}
+</template>

@@ -1,29 +1,43 @@
 <template name="registration">
-   <h1>Registration</h1> 
-   <!--
-   <div class="input-group-btn">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Sort By <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-         <li><a href="#" id="Default">Default</a></li>
-         <li><a href="#" id="School">School</a></li>
-         <li><a href="#" id="Committee">Committee</a></li>
-         <li><a href="#" id="Room">Room</a></li>
-      </ul>
-   </div>
-   -->
-   <table class="table table-hover">
+   
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear"  id="searchIcon"> {{>ionIcon icon="ios-search"}}</button>
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Registration</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+  {{#ionContent}}
+  <div class="bar bar-header item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search">
+    </label>
+    <button class="button button-clear">
+      Cancel
+    </button>
+  </div>
+
+  <table class="table table-hover">
       <thead>
          <tr>
             <th>
             </th>
-            <th>   
-            <div class="input-group-btn">
+            <th> 
+            Name
+            <!--<div class="input-group-btn">
                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Name <span class="caret"></span></button>
                   <ul class="dropdown-menu">
                      <li><a href="#" id="A">A-Z</a></li>
                      <li><a href="#" id="Z">Z-A</a></li>
                   </ul>
-               </div>
+               </div>-->
             </th>
             <th>
                <div class="input-group-btn">
@@ -80,6 +94,8 @@
          {{/each}}
       </tbody>
    </table>
+   {{/ionContent}}
+   {{/ionView}}
 </template>
 		
 <template name="registrationRow">
@@ -89,7 +105,6 @@
          <td>{{School}}</td>
          <td>{{Committee}}</td>
          <td>{{Room}}</td>
-         <td><span class="glyphicon glyphicon-pencil"></span></td>
          <td><span class="glyphicon glyphicon-remove jbsapp-delete-icon" aria-hidden="true"></span></td>
       </tr>
 </template>

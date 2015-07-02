@@ -1,8 +1,15 @@
 <template name="memory">
-	<h1>Memory</h1>
-	<p>Share your memory with us!</p>
+{{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+   {{/contentFor}}
+  
+   {{#contentFor "headerTitle"}}
+      <h1 class="title">Memory</h1>
+   {{/contentFor}}
 
-	<hr/>
+   {{#ionView}}
+   {{#ionContent}}
+
 	<table  class="table table-hover">
 		<thead>
 			<tr>
@@ -24,7 +31,8 @@
 	{{else}}
 		<p>You must be logged in to leave comments.</p>
 	{{/if}}
-	
+   {{/ionContent}}
+   {{/ionView}}
 </template>
 
 

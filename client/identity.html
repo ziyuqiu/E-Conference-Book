@@ -1,0 +1,24 @@
+<template name="identity">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">E-Conference-Book</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+
+        {{#ionItem path="index" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark-outline" class="positive"}}
+          Admin
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+        {{#ionItem path="index" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+          User
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

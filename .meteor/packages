@@ -16,3 +16,7 @@ autopublish
 semantic:ui-checkbox
 yasaricli:kalypto
 d3js:d3
+meteoric:ionic
+meteoric:ionic-sass
+meteoric:ionicons-sass
+fourseven:scss

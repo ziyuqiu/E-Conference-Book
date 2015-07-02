@@ -1,17 +1,28 @@
 <template name="information">
-<h1>Information</h1>
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton divath="index"}}
+  {{/contentFor}}
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title" style="center">Information</h1>
+  {{/contentFor}}
+
+   {{#ionView}}
+   {{#ionContent}}
 	<div class="row">
-		<div class="col-md-6 col-md-offset-0 col-xs-6">
+		<div class="col-md-12 col-md-offset-0 col-xs-12">
 			<img src="images/Brandeis-Logo.gif" width="100%" alt="logo"/>
-			<p>Name: Brandeis University</p>
-			<p>Address: 415 South Street</p>
-			<p>City: Waltham</p>
-			<p>State: MA</p>
-			<p>Zip code: 02453</p>
-			<p>Traffic:</p>
-			<p>Commuter Rail (Fitchburg line - Brandeis / Roberts)</p>
-			<p>Buses</p>
-			<p>553,70      Tavern Rd @ Weston St</p>
+			<div>Name: Brandeis University</div>
+			<div>Address: 415 South Street</div>
+			<div>City: Waltham</div>
+			<div>State: MA</div>
+			<div>Zidiv code: 02453</div>
+			<div>Traffic:</div>
+			<div>Commuter Rail (Fitchburg line - Brandeis / Roberts)</div>
+			<div>Buses</div>
+			<div>553,70      Tavern Rd @ Weston St</div>
 		</div>
 	</div>
+	{{/ionContent}}
+   	{{/ionView}}
 </template>

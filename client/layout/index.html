@@ -1,0 +1,96 @@
+<template name="index">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">E-Conference-Book</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+      <!-- {{>ionNavBackButton path="game"}} -->
+<!--       {{> ionIcon icon="ios-locked-outline" class="positive"}} -->
+          <ul class="nav navbar-nav navbar-right">
+                  {{> loginButtons}} <!-- here -->
+          </ul> 
+   {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList}}
+
+        {{#ionItem path="registrationPersonal" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark-outline" class="positive"}}
+          Registration
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+        {{#ionItem path="registration" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-checkmark" class="positive"}}
+          RegistrationAdmin
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+        {{#ionItem path="schedule" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-calendar-outline" class="positive"}}
+          Schedule
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+        {{#ionItem path="updates" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-bookmarks" class="positive"}}
+          Updates
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+        {{#ionItem path="information" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-information-outline" class="positive"}}
+          Information
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+        {{#ionItem path="dictation" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-recording" class="positive"}}
+          Dictate
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}	
+
+        {{#ionItem path="diy" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-compose-outline" class="positive"}}
+          Note
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}	
+
+        {{#ionItem path="memory" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-paw" class="positive"}}
+          Memory
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+        {{#ionItem path="contact" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-people-outline" class="positive"}}
+          Contact
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+        {{#ionItem path="product" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-cart" class="positive"}}
+          Product
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+        
+<!--         {{#ionItem iconLeft=true iconRight=true}} -->
+<!--           {{> ionIcon icon="ios-locked-outline" class="positive"}}
+          {{> loginButtons}} -->
+<!--         {{/ionItem}} -->
+        {{#ionItem path="time" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-clock-outline" class="positive"}}
+          Time
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+        {{#ionItem path="game" iconLeft=true iconRight=true}}
+          {{> ionIcon icon="ios-game-controller-b" class="positive"}}
+          Game
+          {{> ionIcon icon="ios-arrow-right"}}
+        {{/ionItem}}
+
+
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

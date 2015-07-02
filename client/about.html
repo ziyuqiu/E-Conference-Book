@@ -1,8 +1,24 @@
+
 <template name="contact">
 
-	<h2>Contact:</h2>
-	<p>Ziyu Qiu</p>
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Contact</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+  {{#ionContent}}
+	<!-- <p>Producer: Ziyu Qiu</p>
 	<p>Tel:  (781)609-8784</p>
-	Email: <a href="ziyuqiu@brandeis.edu">ziyuqiu@brandeis.edu</a>
+	Email: <a href="ziyuqiu@brandeis.edu">ziyuqiu@brandeis.edu</a> -->
+
+    <div class="col-md-12 col-md-offset-0 col-xs-12">
+      <img src="images/contact.png" width="100%" alt="contact"/>
+    </div>
+  {{/ionContent}}
+  {{/ionView}}
 
 </template>

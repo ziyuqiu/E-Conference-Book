@@ -1,13 +1,17 @@
-Session.setDefault("School","");
+Session.set("School","");
+Session.set("Committee","");
 
 Template.registration.helpers({
    registrations: function(){
-   		if (Session.get("School") == "") {
-			return Registrations.find({});
-		} else {
+   		if (Session.get("School") == "" && Session.get("Committee") == ""){
+   			return Registrations.find({});
+   		} else if (Session.get("Committee") != "" && Session.get("School") != ""){
+   			return Registrations.find({"Committee":Session.get("Committee"),"School":Session.get("School")},{sort:{"Name":1}});
+   		} else if(Session.get("Committee") == ""){
    			return Registrations.find({"School":Session.get("School")},{sort:{"Name":1}});
-   		}
-   		
+   		} else if (Session.get("School") == ""){
+   			return Registrations.find({"Committee":Session.get("Committee")});
+   		}   		
    }
 })
 
@@ -49,6 +53,8 @@ Template.registration.events({
 	'click #GA1':function(event){
 			event.preventDefault();
 			Session.set("Committee","GA1");
+
+
 	},
 	'click #GA2':function(event){
 			event.preventDefault();

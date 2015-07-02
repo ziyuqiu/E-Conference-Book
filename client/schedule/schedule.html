@@ -1,15 +1,14 @@
 <template name="schedule">
-<h1>Schedules</h1>
-	<!--
-	<div class="ui tabular menu">
-		<a class="active item">
-		    Schedules
-		</a>
-		<a class="item">
-		    Myschedules
-		</a>
-	</div>
-	-->
+{{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+   {{/contentFor}}
+  
+   {{#contentFor "headerTitle"}}
+      <h1 class="title">Schedule</h1>
+   {{/contentFor}}
+
+	{{#ionView}}
+   	{{#ionContent}}   
  	<div class="input-group-btn">
       	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">Order <span class="caret"></span></button>
       	<ul class="dropdown-menu">
@@ -17,39 +16,41 @@
         	<li><a href="#" id="Recent">Most Recently</a></li>
       	</ul>
    	</div>
-<table class="table table-hover">
-	<thead>
-		<tr>
-			<th></th>
-			<th>Date</th>
-			<th>Time</th>
-			<th>Event</th>
-			<th>Room</th>
-			<th>Speaker</th>
-		</tr>
-	</thead>
-	<tbody>
-		{{#each schedules}}
-			{{> scheduleRow}}
-		{{/each}}
-	</tbody>
-</table>
-<hr/>
-<input type="button" class="add_button" value="Add to my schedule">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>Event</th>
+				<th>Room</th>
+				<th>Speaker</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each schedules}}
+				{{> scheduleRow}}
+			{{/each}}
+		</tbody>
+	</table>
 
+	<input type="button" class="add_button" value="Add to my schedule">
+   {{/ionContent}}
+   {{/ionView}}
 </template>
 
 
 <template name="scheduleRow">
+
+
+
 		<tr>
-			<td>{{> checkbox}}</td>
+			<td>{{>checkbox}}</td>
 			<td>{{Date}}</td>
 			<td>{{Time}}</td>
 			<td>{{Event}}</td>
 			<td>{{Room}}</td>
 			<td>{{Speaker}}</td>
-
-			<td><span class="glyphicon glyphicon-pencil"></span></td>
 			<td><span class="glyphicon glyphicon-remove jbsapp-delete-icon" aria-hidden="true"></span></td>
 		</tr>
 </template>

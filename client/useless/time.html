@@ -1,11 +1,19 @@
 <template name="time">
-    <html>
+    {{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="index"}}
+   {{/contentFor}}
+  
+   {{#contentFor "headerTitle"}}
+      <h1 class="title">Time</h1>
+   {{/contentFor}}
+
+  <html>
     <meta charset="utf-8">
     <style>
         body {
           
           font-family: sans-serif;
-          font-style: italic;
+          /*font-style: italic;*/
         }
     </style>
     <body>
@@ -147,5 +155,5 @@
      
     </script>
     </body>
-    </html>
+  </html>
 </template>

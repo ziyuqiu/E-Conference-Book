@@ -1,4 +1,14 @@
 <template name="dictation">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Dicatation</h1>
+  {{/contentFor}}
+  
+   {{#ionView}}
+   {{#ionContent}}
   <div>
     <button type="button" class="start_button">
       <span class="glyphicon glyphicon-play"></span> Start
@@ -15,4 +25,6 @@
     <span id="final_span" class="final"></span>
     <span id="interim_span" class="interim"></span>
   </div>
+  {{/ionContent}}
+  {{/ionView}}
 </template>

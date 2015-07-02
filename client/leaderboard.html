@@ -1,0 +1,30 @@
+<template name="leaderboard">
+{{#contentFor "headerButtonLeft"}}
+      {{>ionNavBackButton path="game"}}
+   {{/contentFor}}
+  
+   {{#contentFor "headerTitle"}}
+      <h1 class="title">Leaderboard</h1>
+   {{/contentFor}}
+
+   {{#ionView}}
+   {{#ionContent}}
+			<table class="table table-centered table-hover">
+				<thead>
+					<tr> 
+						<!-- <th>Player</th> --><th>Score</th><th>Time</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{{#each player}}
+						<tr>
+						<!-- <th>{{name}}</th> --><th>{{same}}</th><th>{{score}}</th>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+
+	{{/ionContent}}
+   	{{/ionView}}
+</template>

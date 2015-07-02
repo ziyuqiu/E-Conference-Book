@@ -1,0 +1,66 @@
+<template name="registrationPersonal">
+  	{{#contentFor "headerTitle"}}
+    	<h1 class="title">E-Conference-Book</h1>
+  	{{/contentFor}}
+  	{{#contentFor "headerButtonLeft"}}
+    	{{>ionNavBackButton path="index"}}
+  	{{/contentFor}}
+
+	{{#ionView}}
+   		{{#ionContent}}
+			<div class="list">
+				<div class="list">
+				  <label class="item item-input">
+				    <span class="input-label">First Name</span>
+				    <input type="text">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">Last Name</span>
+				    <input type="text">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">Tel</span>
+				    <input type="tel">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">Email</span>
+				    <input type="email">
+				  </label>
+				  <div class="list">
+				  <label class="item item-input item-select">
+				    <div class="input-label">
+				      Transportation
+				    </div>
+				    <select>
+				      <option>Plane</option>
+				      <option>Bus</option>
+				      <option>Train</option>
+				       <option>Drive</option>
+				    </select>
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">Flight Number</span>
+				    <input type="text">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">Arrival Time</span>
+				    <input type="date">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">Room</span>
+				    <input type="number">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">ID Number</span>
+				    <input type="password">
+				  </label>
+
+				</div>
+
+				</div>
+			</div>
+		{{/ionContent}}
+   	{{/ionView}}
+
+
+</template>
